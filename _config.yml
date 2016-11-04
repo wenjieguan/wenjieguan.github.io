@@ -53,6 +53,12 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
+# Show at most 10 posts in one page
+paginate: 10
+
+# The destination of the pagination pages
+paginate_path: "/page:num/"
+
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
@@ -76,6 +82,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate # Break the main listing of posts up into smaller lists and display them over multiple pages 
 
 # Exclude these files from your production _site
 exclude:
