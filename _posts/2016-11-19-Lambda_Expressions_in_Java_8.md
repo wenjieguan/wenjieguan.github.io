@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Lambda Expression in Java 8
+title: Lambda Expressions in Java 8
 ---
 
-The Lambda expression is a new feature added in Java 8, which significanly enhances the expressive power of the language. It's even compared to the addition of generics to emphasise it's importance. Indeed, together with functional interfaces, method references and streams, we could write more productive and elegant code than ever before. There are loads of tutorials out there on how to use lambda expressions, therefore I just skip this part and focus more on things that I found interesting.
+The Lambda expression is a new feature added in Java 8, which significantly enhances the expressive power of the language. It's even compared to the addition of generics to emphasise it's importance. Indeed, together with functional interfaces, method references and streams, we could write more productive and elegant code than ever before. There are loads of tutorials out there on how to use lambda expressions, therefore I just skip this part and focus more on things that I found interesting.
 
 ### The Evolution of Expressive Power
 Suppose you have a list of strings and you simply want them to be ordered by their sizes such that shorter strings come before longer ones. Here is a simplified Comparator interface.
@@ -16,7 +16,7 @@ interface Comparator<T> {
 
 A naive try without using an anonymous class and lambda expression would be:
 
-```
+```java
 class myComparator<String> implements Comparator<String> {
     public int compare(String a, String b) {
         return a.length() < b.length() ? -1 : a.length() == b.length() ? 0 : 1;
@@ -63,7 +63,9 @@ Collections.sort(
 ``` 
 
 ### Variable Capture
-Similar to a local class, in a lambda expression you can access static variables and instance variables of the enclosing class, and local variables of the enclosing method. In terms of using local variables from the enclosing mothod, this specifc situation is referred to as a variable capture. Because a local variable is situated on a stack, which means its value will become invalid once its enclosing method exits, and the local variable has to survive the whole lambda execution which is normally longer than the life time of its enclosing method, a local variable then must be captured. Once captured, when does Java update its value if the local variable in the enclosing scope has been changed? The answer is simply no, you can't even change the value. There is a restriction on captured variables: they should be declared final or effectively final (effectively final means the value of a local variable is not changed once initialised). Had this restriction been lifted, there would likely to be confusion caused (which value to use, the one when the lambda expression is defined or the updated value) and extra complexity in concurrence. This rule may sound limiting, but mostly it is enough for normal uses, because we still can change underlying object even if the variable pointing to it is final or effectively final. Like the code shown below, a lambda expression is used to collect strings with size longer than a number into a list:
+Similar to a local class, in a lambda expression you can access static variables and instance variables of the enclosing class, and local variables of the enclosing method. In terms of using local variables from the enclosing mothod, this specifc situation is referred to as a variable capture. Because a local variable is situated on a stack, which means its value will become invalid once its enclosing method exits, and the local variable has to survive the whole lambda execution which is normally longer than the life time of its enclosing method, a local variable then must be captured.
+ 
+Once captured, when does Java update its value if the local variable in the enclosing scope has been changed? The answer is simply no, you can't even change the value. There is a restriction on captured variables: they should be declared final or effectively final (effectively final means the value of a local variable is not changed once initialised). Had this restriction been lifted, there would likely to be confusion caused (which value to use, the one when the lambda expression is defined or the updated value) and extra complexity in concurrence. This rule may sound limiting, but mostly it is enough for normal uses, because we still can change underlying object even if the variable pointing to it is final or effectively final. Like the code shown below, a lambda expression is used to collect strings with size longer than a number into a list:
 
 ```java
 List<String> getStringsLongerThan(List<String> strings, int len) {
