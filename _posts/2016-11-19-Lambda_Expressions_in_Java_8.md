@@ -53,7 +53,7 @@ Collections.sort(
 
 As you can see, this code is way more succinct than the previous one. The lambda expression really shifts your focus from writing code appealing to the compiler to appealing to humans. You can now think in a more abstract way, just treat it as passing a function, a behaviour around, without worrying too much about the details, because a compiler has taken care of it.
 
-With the arrial of lambda expressions, a large number of Java APIs have been enriched to help us think in **Lambda**. For example, the Comparator interface (as of Java 8, an interface can have static methods and default instance methods) has a bunch of static methods and default methods with functional interfaces as parameters to assist us deal with common cases, therefore, the code can be further simplified as:
+With the arrival of lambda expressions, a large number of Java APIs have been enriched to help us think in **Lambda**. For example, the Comparator interface (as of Java 8, an interface can have static methods and default instance methods) has a bunch of static methods and default methods with functional interfaces as parameters to assist us deal with common cases, therefore, the code can be further simplified as:
 
 ```java
 Collections.sort(
