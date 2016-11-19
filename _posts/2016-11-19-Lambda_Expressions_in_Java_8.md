@@ -16,7 +16,7 @@ interface Comparator<T> {
 
 A naive try without using an anonymous class and lambda expression would be:
 
-```java
+```
 class myComparator<String> implements Comparator<String> {
     public int compare(String a, String b) {
         return a.length() < b.length() ? -1 : a.length() == b.length() ? 0 : 1;
@@ -66,7 +66,7 @@ Collections.sort(
 Similar to a local class, in a lambda expression you can access static variables and instance variables of the enclosing class, and local variables of the enclosing method. In terms of using local variables from the enclosing mothod, this specifc situation is referred to as a variable capture. Because a local variable is situated on a stack, which means its value will become invalid once its enclosing method exits, and the local variable has to survive the whole lambda execution which is normally longer than the life time of its enclosing method, a local variable then must be captured. Once captured, when does Java update its value if the local variable in the enclosing scope has been changed? The answer is simply no, you can't even change the value. There is a restriction on captured variables: they should be declared final or effectively final (effectively final means the value of a local variable is not changed once initialised). Had this restriction been lifted, there would likely to be confusion caused (which value to use, the one when the lambda expression is defined or the updated value) and extra complexity in concurrence. This rule may sound limiting, but mostly it is enough for normal uses, because we still can change underlying object even if the variable pointing to it is final or effectively final. Like the code shown below, a lambda expression is used to collect strings with size longer than a number into a list:
 
 ```java
-List<String> getStringsLongerThan(List<Strings> strings, int len) {
+List<String> getStringsLongerThan(List<String> strings, int len) {
     List<String> res = new ArrayList<>();
     strings.stream()
            .filter(s -> s.length() > len)
@@ -79,7 +79,7 @@ List<String> getStringsLongerThan(List<Strings> strings, int len) {
 ```
 
 #### Quiz?
-**Q:** In a lambda expression, if you access a instance int variable of the enclosing class, can you change the value in or outside your lambda?
+**Q:** In a lambda expression, if you access a instance int variable of the enclosing class, can you change the value in or outside your lambda?  
 **A:** Yes, you can. Although the same final or effective final rule applies in this case, in a lambda expression a compiler generates a implicit final reference **this** which refers to the enclosing class.(which you can think of as captureing the final **this** reference) Since it's done for you behind scene, you don't normally feel this rule when using instance variables.
 
 ### Anonymous Class
