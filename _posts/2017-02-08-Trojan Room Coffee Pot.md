@@ -16,9 +16,9 @@ title: Trojan Room Coffe Pot
 整个故事就是这么的有趣，XCoffee小哥的一句话足以概括一切
 >When convenience was the mother of invention
 
-最后附上系统在关闭之前的最后一张截图
-![最后的截图](https://www.cl.cam.ac.uk/coffee/qsf/xvcoffee5.gif "最后的截图")
-猜猜一共有几只手？
+最后附上系统在关闭之前的最后一张截图  
+![最后的截图](https://www.cl.cam.ac.uk/coffee/qsf/xvcoffee5.gif "最后的截图")  
+猜猜一共有几只手？  
 
 ###
 1. [Trojan Room Coffee Pot](https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot)
