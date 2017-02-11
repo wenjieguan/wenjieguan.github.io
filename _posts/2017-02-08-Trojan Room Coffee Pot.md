@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trojan Room Coffe Pot
+title: Trojan Room Coffee Pot
 ---
 
 世界上最早的网红是什么？也许没有标题的提示，抓破脑袋都想不到居然是这个普普通通的咖啡壶。 是的，在机缘巧合的作用下，这个平凡无奇的咖啡壶就在历史上留了一笔。事情还得从90年代说起，当时的互联网可不像现在这样丰富多彩。在直播网站上还能刷个666什么的，这些脱离了温饱，上升到精神娱乐层面的事，在当年可是想都不敢想。 当初的互联网可以算是一片贫瘠，只不过是学术界的一个概念。举个例子，当时的浏览器都没有给自己喜欢的网站加书签的功能。为什么？因为不需要啊，所有的网站用手指掰一掰都数得过来。记忆力不错的都记得住。
@@ -21,7 +21,7 @@ title: Trojan Room Coffe Pot
 ![最后的截图](https://www.cl.cam.ac.uk/coffee/qsf/xvcoffee5.gif "最后的截图")  
 猜猜一共有几只手？  
 
-###
+###Reference
 1. [Trojan Room Coffee Pot](https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot)
 2. [Plug pulled on web's historic coffee pot](https://www.theguardian.com/technology/2001/mar/07/education.highereducation)
 3. [The Trojan Room Coffee Pot Resources](http://www.cl.cam.ac.uk/coffee/qsf/)
