@@ -132,6 +132,11 @@ img {
   float: right;
 }
 
+.excerpt-img {
+  float: right;
+  margin: 5px 0px 20px 20px;
+}
+
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
